@@ -43,7 +43,7 @@ async def main(algorithm, date, tickers=None, ticker=None):
             media_group.append(
                 types.InputMediaPhoto(media=open(path, 'rb')),
             )
-        text = f"<b>Ticker:</b> {ticker}\n" \
+        text = f"<b>Ticker:</b> {','.join(tickers)}\n" \
                f"\n<b>Algorithm:</b> {algorithm}\n" \
                f"\n<b>Date:</b> {date}"
         message = await bot.send_media_group(chat_id=config.main_user, media=media_group)
