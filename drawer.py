@@ -57,7 +57,7 @@ class Setup:
         self.check_offer_win()
 
 
-        chart = self.driver.find_element(By.XPATH, "/html/body/div[2]/div[5]")
+        chart = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/div[5]")
         screenshot = chart.screenshot_as_png
         image = Image.open(BytesIO(screenshot))
         image.save(self.filepath)
